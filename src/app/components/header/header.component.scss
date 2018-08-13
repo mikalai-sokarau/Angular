@@ -1,0 +1,38 @@
+$img-size: 5em;
+
+header {
+  padding: 1em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  #logotype {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+
+    span {
+      font-size: 3em;
+      font-style: italic;
+    }
+
+    img {
+      height: $img-size;
+      width: $img-size;
+      margin-right: 1em;
+    }
+  }
+
+  #authorization {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+
+    span {
+      margin-right: 1em;
+    }
+  }
+}
+
+
