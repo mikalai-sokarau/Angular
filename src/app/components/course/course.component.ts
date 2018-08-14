@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CourseInterface } from '../../shared/models/course-interface';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-course',
@@ -13,6 +14,8 @@ export class CourseComponent implements CourseInterface, OnInit {
   @Input() duration: string;
   @Input() description: string;
   @Input() img: string;
+  faCoffee = faCoffee;
+
 
   buttonNames = ['Edit', 'Delete'];
 
