@@ -1,0 +1,14 @@
+div {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  app-main {
+    flex-grow: 1;
+  }
+
+  app-main, app-header, app-footer {
+    flex-shrink: 0;
+  }
+}
