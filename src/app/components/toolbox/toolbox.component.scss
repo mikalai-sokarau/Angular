@@ -1,5 +1,27 @@
 #toolbox-wrapper {
   display: flex;
-  justify-content: space-between;
+  flex: 1;
+  // justify-content: space-between;
   margin: 1em 2em;
+
+  &> div {
+    width: 50%;
+  }
+  #search-block {
+    display: flex;
+
+    #input {
+      flex: 5;
+    }
+    #button {
+      flex: 1;
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+
+  #add-course-button {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
