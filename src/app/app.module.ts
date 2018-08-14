@@ -11,6 +11,7 @@ import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component
 import { ToolboxComponent } from './components/toolbox/toolbox.component';
 import { ButtonComponent } from './shared/button/button.component';
 import { InputComponent } from './shared/input/input.component';
+import { SliceToLengthPipe } from './shared/pipes/slice-to-length.pipe';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { InputComponent } from './shared/input/input.component';
     ToolboxComponent,
     ButtonComponent,
     InputComponent,
+    SliceToLengthPipe,
   ],
   imports: [
     BrowserModule
