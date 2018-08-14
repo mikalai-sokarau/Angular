@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { CourseInterface } from '../../shared/models/course-interface';
 
 @Component({
   selector: 'app-course',
   templateUrl: './course.component.html',
   styleUrls: ['./course.component.scss']
 })
-export class CourseComponent implements OnInit {
-  name = 'course name';
-  duration = '1h 39m';
-  date = '01.01.1980';
-  description = 'course description';
+export class CourseComponent implements CourseInterface, OnInit {
+  @Input() id: string;
+  @Input() title: string;
+  @Input() date: string;
+  @Input() duration: string;
+  @Input() description: string;
+  @Input() img: string;
+
+  buttonNames = ['Edit', 'Delete'];
 
   constructor() { }
 

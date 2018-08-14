@@ -4,16 +4,24 @@ section {
   border: 1px solid black;
   margin: 1em 0;
   padding: 1em;
-
+  height: 100px;
 
   #course-info {
+    margin-right: 1em;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     flex: 20;
 
     #course-header {
       display: flex;
       justify-content: space-between;
+    }
+
+    #course-description {
+      max-height: 50px;
+      text-align: justify;
+      overflow: hidden;
     }
   }
 
