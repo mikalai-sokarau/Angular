@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   login = 'user';
+  logInButtonText = this.login ? "Log out" : "Log in";
 
   constructor() { }
 
