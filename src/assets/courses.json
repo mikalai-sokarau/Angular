@@ -1,46 +1,60 @@
 {
   "courses": [
     {
-      "name": "",
-      "date": "",
-      "duration": "",
-      "description": ""
+      "id": "1",
+      "name": "Biological Sciences",
+      "date": "01.09.2018",
+      "duration": "2 weeks",
+      "img": "assets/images/biology.jpg",
+      "description": "Biology is fundamental in the most literal sense of the word. It’s all about how things live, breed, breathe and die, it's about the gears that keep us and everything else loudly chugging along. It’s fascinating."
     },
     {
-      "name": "",
-      "date": "",
-      "duration": "",
-      "description": ""
+      "id": "2",
+      "name": " Business & Management",
+      "date": "01.09.2018",
+      "duration": "1.5 weeks",
+      "img": "assets/images/business.jpg",
+      "description": "For those considering a degree in this area but need further convincing, the Complete University Guide lends its expertise. Here are the top nine reasons to study a Business & Management Studies degree:"
     },
     {
-      "name": "",
-      "date": "",
-      "duration": "",
-      "description": ""
+      "id": "3",
+      "name": "Chemistry",
+      "date": "01.09.2018",
+      "duration": "2 months",
+      "img": "assets/images/chemistry.jpg",
+      "description": "Search through over 1,000 Chemistry courses at UK providers. Filter results by institution, region, type of qualification, mode of study, entry qualifications and CUG ranking."
     },
     {
-      "name": "",
-      "date": "",
-      "duration": "",
-      "description": ""
+      "id": "4",
+      "name": "Computer Science",
+      "date": "01.09.2018",
+      "duration": "3 months",
+      "img": "assets/images/computers.jpg",
+      "description": "Like it or not you're living in it – this is the Digital Age. Computer programmes have all but infiltrated every aspect of our lives. Computer scientists theorise, design, develop, and apply the software and hardware for the programmes we use day in day out – sounds pretty important to us."
     },
     {
-      "name": "",
-      "date": "",
-      "duration": "",
-      "description": ""
+      "id": "5",
+      "name": "Food Science",
+      "date": "01.09.2018",
+      "duration": "12 hours",
+      "img": "assets/images/food.jpg",
+      "description": "The food industry is immense, and if students secure a managerial role, or work for a large and successful company, there is a strong potential of earning big money!"
     },
     {
-      "name": "",
-      "date": "",
-      "duration": "",
-      "description": ""
+      "id": "6",
+      "name": "Mathematics",
+      "date": "01.09.2018",
+      "duration": "2.5 months",
+      "img": "assets/images/math.jpg",
+      "description": "There are a lot of modules to get through, and contact hours can be high, however I have managed to make a great set of friends in my flat. I spend most of my free time with my flat and am actually living with most of them next year. The nightlife in Bristol is a major socialising opportunity, with an unbelievable array of DJ's, bands etc...You are never bored."
     },
     {
-      "name": "",
-      "date": "",
-      "duration": "",
-      "description": ""
+      "id": "7",
+      "name": "Veterinary Medicine",
+      "date": "01.09.2018",
+      "duration": "5 weeks",
+      "img": "assets/images/veterinary.jpg",
+      "description": "This degree is designed to train and prepare you for a career as a veterinary practitioner either in general practice or in a more specialised field such as small animal, farm animal, equine or exotic animal practice."
     }
   ]
 }
