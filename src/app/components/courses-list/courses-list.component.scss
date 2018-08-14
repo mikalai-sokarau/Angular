@@ -1,7 +1,16 @@
+div {
+  display: flex;
+  flex-direction: column;
+}
+
 ul {
   margin: 1em 2em;
 
   li {
     list-style: none;
   }
+}
+
+app-button {
+  align-self: center;
 }
