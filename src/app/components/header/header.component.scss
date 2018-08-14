@@ -6,11 +6,11 @@ header {
   align-items: center;
   justify-content: space-between;
 
-  #logotype {
+  #logotype a {
     display: flex;
     align-items: center;
-    cursor: pointer;
     text-decoration: none;
+    color: black;
 
     span {
       font-size: 3em;
@@ -34,5 +34,3 @@ header {
     }
   }
 }
-
-
