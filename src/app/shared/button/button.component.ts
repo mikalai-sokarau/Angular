@@ -6,8 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent implements OnInit {
-
-  text = 'text';
+  @Input() text: string;
   onClick = () => console.log('click');
   logoSrc = '/path';
 
