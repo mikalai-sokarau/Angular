@@ -1,12 +1,15 @@
 <div>
   <ul>
-    <li>
-      <app-course></app-course>
-      <app-course></app-course>
-      <app-course></app-course>
-      <app-course></app-course>
-      <app-course></app-course>
+    <li *ngFor="let course of coursesList">
+      <app-course
+        id={{course.id}}
+        title={{course.title}}
+        date={{course.date}}
+        duration={{course.duration}}
+        img={{course.img}}
+        description={{course.description}}
+      ></app-course>
     </li>
   </ul>
-  <app-button></app-button>
+  <app-button text="Load more"></app-button>
 </div>
