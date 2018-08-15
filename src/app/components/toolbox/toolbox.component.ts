@@ -7,11 +7,16 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./toolbox.component.scss']
 })
 export class ToolboxComponent implements OnInit {
-  buttonIcon = faPlus;
+  public buttonIcon: object = faPlus;
+  public inputText: string = '';
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  logInputText() {
+    console.log(this.inputText);
   }
 
 }

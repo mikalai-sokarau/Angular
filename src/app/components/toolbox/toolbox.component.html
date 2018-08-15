@@ -1,10 +1,10 @@
 <div id="toolbox-wrapper">
   <div id="search-block">
     <div id="input">
-      <app-input></app-input>
+      <input type="text" [(ngModel)]="inputText" />
     </div>
     <div id="button">
-      <app-button text="Search"></app-button>
+      <app-button text="Search" (click)="logInputText()"></app-button>
     </div>
   </div>
   <div id="add-course-button">

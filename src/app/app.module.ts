@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -11,7 +12,6 @@ import { MainComponent } from './components/main/main.component';
 import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component';
 import { ToolboxComponent } from './components/toolbox/toolbox.component';
 import { ButtonComponent } from './shared/button/button.component';
-import { InputComponent } from './shared/input/input.component';
 import { SliceToLengthPipe } from './shared/pipes/slice-to-length.pipe';
 
 @NgModule({
@@ -25,12 +25,12 @@ import { SliceToLengthPipe } from './shared/pipes/slice-to-length.pipe';
     BreadcrumbsComponent,
     ToolboxComponent,
     ButtonComponent,
-    InputComponent,
     SliceToLengthPipe,
   ],
   imports: [
     BrowserModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
