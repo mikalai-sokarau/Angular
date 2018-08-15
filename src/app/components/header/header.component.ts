@@ -6,14 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  login = 'user';
-  logInButtonText = this.login ? "Log out" : "Log in";
+  login = 'user' || "Log in";
 
   constructor() { }
 
   ngOnInit() {
   }
-
-
 }
