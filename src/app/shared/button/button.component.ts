@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
   @Input() text: string;
+  @Input() icon: object;
   onClick = () => console.log('click');
   logoSrc = '/path';
 

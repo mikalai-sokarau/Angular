@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-courses-list',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoursesListComponent implements OnInit {
   coursesList: Array<any>;
+  buttonIcon = faArrowAltCircleDown;
 
   constructor() {}
 
