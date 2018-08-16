@@ -7,7 +7,7 @@ import { faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./courses-list.component.scss']
 })
 export class CoursesListComponent implements OnInit {
-  coursesList: Array<any>;
+  coursesList: Array<object>;
   buttonIcon = faArrowAltCircleDown;
 
   constructor() {}
@@ -17,5 +17,13 @@ export class CoursesListComponent implements OnInit {
       .then(res => res.json())
       .then(data => (this.coursesList = data.courses))
       .catch(e => console.log(e));
+  }
+
+  onClick(id: string) {
+    console.log(id);
+  }
+
+  loadMore() {
+    console.log('load more');
   }
 }

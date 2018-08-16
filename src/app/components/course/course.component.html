@@ -12,7 +12,7 @@
     <div id="course-description">{{description | sliceToLength}}</div>
   </div>
   <div id="buttons-block">
-    <app-button text={{buttonNames[0]}} [icon]="editIcon"></app-button>
-    <app-button text={{buttonNames[1]}} [icon]="deleteIcon"></app-button>
+    <app-button text={{buttonNames[0]}} [icon]="editIcon" (onClickHandler)="onClick($event)"></app-button>
+    <app-button text={{buttonNames[1]}} [icon]="deleteIcon" (onClickHandler)="onClick($event)"></app-button>
   </div>
 </section>

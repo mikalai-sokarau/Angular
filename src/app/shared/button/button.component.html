@@ -1,1 +1,4 @@
-<button (click)="onClick()"><fa-icon *ngIf="icon" [icon]="icon"></fa-icon>{{text}}</button>
+<button (click)="onClick($event)">
+  <fa-icon *ngIf="icon" [icon]="icon"></fa-icon>
+  {{text}}
+</button>
