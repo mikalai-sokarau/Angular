@@ -12,8 +12,9 @@ import { MainComponent } from './components/main/main.component';
 import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component';
 import { ToolboxComponent } from './components/toolbox/toolbox.component';
 import { ButtonComponent } from './shared/button/button.component';
-import { SliceToLengthPipe } from './shared/pipes/slice-to-length.pipe';
+import { SliceToLengthPipe } from './shared/pipes/sliceToLength/slice-to-length.pipe';
 import { BorderStylingDirective } from './shared/directives/borderStyling/border-styling.directive';
+import { DateFormatterPipe } from './shared/pipes/dateFormatter/date-formatter.pipe';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { BorderStylingDirective } from './shared/directives/borderStyling/border
     ButtonComponent,
     SliceToLengthPipe,
     BorderStylingDirective,
+    DateFormatterPipe,
   ],
   imports: [
     BrowserModule,
