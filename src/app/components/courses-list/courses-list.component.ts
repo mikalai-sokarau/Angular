@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons';
 
+const EMPTY_COURSES_LIST_MESSAGE = "No data, feel free to add new course.";
+
 @Component({
   selector: 'app-courses-list',
   templateUrl: './courses-list.component.html',
@@ -9,6 +11,7 @@ import { faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons';
 export class CoursesListComponent implements OnInit {
   coursesList: Array<object>;
   buttonIcon = faArrowAltCircleDown;
+  errorMessage: string;
 
   constructor() {}
 
@@ -16,7 +19,11 @@ export class CoursesListComponent implements OnInit {
     fetch('../../../assets/courses.json')
       .then(res => res.json())
       .then(data => (this.coursesList = data.courses))
-      .catch(e => console.log(e));
+      .catch(e => {
+          this.errorMessage = EMPTY_COURSES_LIST_MESSAGE;
+          console.log(e);
+        }
+      );
   }
 
   onClick(id: string) {
