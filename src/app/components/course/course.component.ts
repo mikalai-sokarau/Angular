@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { TimeDifferenceService } from '../../shared/services/time/timeDifference.service';
 import { CourseInterface } from '../../shared/models/course-interface';
 import { faEdit, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
