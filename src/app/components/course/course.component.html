@@ -2,7 +2,7 @@
   <div id="course-info">
     <div id="course-header">
       <div>
-        <span id="name">{{title}}</span>
+        <span id="name">{{title | uppercase}}</span>
         <fa-icon *ngIf="isCourseTopRated()" [icon]="topRatedIcon"></fa-icon>
       </div>
       <div>
