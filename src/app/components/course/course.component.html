@@ -1,9 +1,9 @@
-<section [appBorderStyling]="color">
+<section [appBorderStyling]="color" [ngClass]="isCourseHighlighted()">
   <div id="course-info">
     <div id="course-header">
       <div>
         <span id="name">{{title}}</span>
-        <fa-icon *ngIf="isTopRated === 'true'" [icon]="topRatedIcon"></fa-icon>
+        <fa-icon *ngIf="isCourseTopRated()" [icon]="topRatedIcon"></fa-icon>
       </div>
       <div>
         <span id="duration">{{duration}} </span>
