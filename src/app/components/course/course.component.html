@@ -7,7 +7,7 @@
       </div>
       <div>
         <span id="duration">{{duration | duration}} </span>
-        <span id="date">{{creationDate | dateFormatter}}</span>
+        <span id="date">{{creationDate | date:'dd.MM.yyyy'}}</span>
       </div>
     </div>
     <div id="course-description">{{description | sliceToLength}}</div>
