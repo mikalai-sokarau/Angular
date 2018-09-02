@@ -14,8 +14,8 @@ import { ToolboxComponent } from './components/toolbox/toolbox.component';
 import { ButtonComponent } from './shared/button/button.component';
 import { SliceToLengthPipe } from './shared/pipes/sliceToLength/slice-to-length.pipe';
 import { BorderStylingDirective } from './shared/directives/borderStyling/border-styling.directive';
-import { DateFormatterPipe } from './shared/pipes/dateFormatter/date-formatter.pipe';
 import { DurationPipe } from './shared/pipes/duration/duration.pipe';
+import { OrderByPipe } from './shared/pipes/orderBy/order-by.pipe';
 
 @NgModule({
   declarations: [
@@ -30,8 +30,8 @@ import { DurationPipe } from './shared/pipes/duration/duration.pipe';
     ButtonComponent,
     SliceToLengthPipe,
     BorderStylingDirective,
-    DateFormatterPipe,
     DurationPipe,
+    OrderByPipe,
   ],
   imports: [
     BrowserModule,
