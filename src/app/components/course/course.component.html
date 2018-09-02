@@ -6,7 +6,7 @@
         <fa-icon *ngIf="isCourseTopRated()" [icon]="topRatedIcon"></fa-icon>
       </div>
       <div>
-        <span id="duration">{{duration}} </span>
+        <span id="duration">{{duration | duration}} </span>
         <span id="date">{{creationDate | dateFormatter}}</span>
       </div>
     </div>
