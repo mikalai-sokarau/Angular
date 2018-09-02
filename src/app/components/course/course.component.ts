@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { CourseInterface } from '../../shared/models/course-interface';
-import { faEdit, IconDefinition } from '@fortawesome/free-solid-svg-icons';
-import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { faTrashAlt, faEdit, faStar, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 const COURSE_FRESHNESS_TIME = 2419200000;
 const FRESH_COURSE_COLOR = 'green';
@@ -19,12 +18,14 @@ export class CourseComponent implements CourseInterface, OnInit {
   @Input() duration: string;
   @Input() description: string;
   @Input() created: string;
+  @Input() isTopRated: boolean;
   @Input() img: string;
   @Output() onClickHandler = new EventEmitter<string>();
 
   public color;
   public editIcon: IconDefinition = faEdit;
   public deleteIcon: IconDefinition = faTrashAlt;
+  public topRatedIcon: IconDefinition = faStar;
   public buttonNames = ['Edit', 'Delete'];
   public currentDate = new Date();
   public creationDate: Date;
@@ -39,6 +40,7 @@ export class CourseComponent implements CourseInterface, OnInit {
     this.creationDate = new Date(this.created);
     const creationMs = this.creationDate.getTime();
     const currentMs = this.currentDate.getTime();
+    console.log(typeof this.isTopRated);
     
     if (creationMs < currentMs && creationMs >= currentMs - COURSE_FRESHNESS_TIME) {
       this.color = FRESH_COURSE_COLOR;
