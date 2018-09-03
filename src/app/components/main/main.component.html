@@ -1,3 +1,3 @@
 <app-breadcrumbs></app-breadcrumbs>
-<app-toolbox></app-toolbox>
-<app-courses-list></app-courses-list>
+<app-toolbox (searchClickHandler)="onSearchClickHandler($event)"></app-toolbox>
+<app-courses-list [filter]="filterBy"></app-courses-list>

@@ -1,16 +1,19 @@
 <div>
-  <ul>
-    <li *ngFor="let course of coursesList">
+  <span class="empty-courses-list" *ngIf="!coursesList">{{errorMessage}}</span>
+  <ul *ngIf="coursesList" >
+    <li *ngFor="let course of coursesList | orderBy:'date' | orderBy:'string':filter">
       <app-course
         id={{course.id}}
         title={{course.title}}
         date={{course.date}}
         duration={{course.duration}}
+        created={{course.creationDate}}
+        isTopRated={{course.isTopRated}}
         img={{course.img}}
         description={{course.description}}
         (onClickHandler)="onClick($event)"
       ></app-course>
     </li>
   </ul>
-  <app-button text="Load more" [icon]="buttonIcon" (click)="loadMore()"></app-button>
+  <app-button *ngIf="coursesList" text="Load more" [icon]="buttonIcon" (click)="loadMore()"></app-button>
 </div>
