@@ -17,6 +17,7 @@ import { BorderStylingDirective } from './shared/directives/borderStyling/border
 import { DurationPipe } from './shared/pipes/duration/duration.pipe';
 import { OrderByPipe } from './shared/pipes/orderBy/order-by.pipe';
 import { CoursesOperationsService } from './shared/services/courseOperations/courses-operations.service';
+import { AuthService } from './shared/services/authorization/auth.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { CoursesOperationsService } from './shared/services/courseOperations/cou
     FormsModule
   ],
   providers: [
-    CoursesOperationsService
+    CoursesOperationsService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
