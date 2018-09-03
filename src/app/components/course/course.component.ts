@@ -40,7 +40,7 @@ export class CourseComponent implements CourseInterface, OnInit {
     this.creationDate = new Date(this.created);
     const creationMs = this.creationDate.getTime();
     const currentMs = this.currentDate.getTime();
-    
+
     if (creationMs < currentMs && creationMs >= currentMs - COURSE_FRESHNESS_TIME) {
       this.color = FRESH_COURSE_COLOR;
     } else if (creationMs > currentMs) {

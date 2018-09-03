@@ -1,7 +1,7 @@
 <div>
   <span class="empty-courses-list" *ngIf="!coursesList">{{errorMessage}}</span>
-  <ul *ngIf="coursesList">
-    <li *ngFor="let course of coursesList | orderBy">
+  <ul *ngIf="coursesList" >
+    <li *ngFor="let course of coursesList | orderBy:'date' | orderBy:'string':filter">
       <app-course
         id={{course.id}}
         title={{course.title}}

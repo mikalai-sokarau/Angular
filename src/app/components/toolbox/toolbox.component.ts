@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -7,6 +7,8 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./toolbox.component.scss']
 })
 export class ToolboxComponent implements OnInit {
+  @Output() searchClickHandler = new EventEmitter<string>();
+
   public buttonIcon: object = faPlus;
   public inputText: string = '';
 
@@ -16,7 +18,7 @@ export class ToolboxComponent implements OnInit {
   }
 
   logInputText() {
-    console.log(this.inputText);
+    this.searchClickHandler.emit(this.inputText)
   }
 
 }

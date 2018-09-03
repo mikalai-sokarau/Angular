@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+  filterBy: string = '';
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  onSearchClickHandler(query: string) {
+    this.filterBy = query;
+  }
 }

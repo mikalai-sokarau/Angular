@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons';
 
 const EMPTY_COURSES_LIST_MESSAGE = "No data, feel free to add new course.";
@@ -9,6 +9,7 @@ const EMPTY_COURSES_LIST_MESSAGE = "No data, feel free to add new course.";
   styleUrls: ['./courses-list.component.scss']
 })
 export class CoursesListComponent implements OnInit {
+  @Input() filter: string;
   coursesList: Array<object>;
   buttonIcon = faArrowAltCircleDown;
   errorMessage: string;
