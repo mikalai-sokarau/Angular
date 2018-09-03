@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons';
+import { CoursesOperationsService } from '../../shared/services/courseOperations/courses-operations.service';
+import { CourseInterface } from '../../shared/models/course-interface';
 
 const EMPTY_COURSES_LIST_MESSAGE = "No data, feel free to add new course.";
 
@@ -10,21 +12,30 @@ const EMPTY_COURSES_LIST_MESSAGE = "No data, feel free to add new course.";
 })
 export class CoursesListComponent implements OnInit {
   @Input() filter: string;
-  coursesList: Array<object>;
+  coursesList: Array<CourseInterface>;
   buttonIcon = faArrowAltCircleDown;
   errorMessage: string;
 
-  constructor() {}
+  constructor(private coursesService: CoursesOperationsService) {}
 
   ngOnInit() {
-    fetch('../../../assets/courses.json')
-      .then(res => res.json())
-      .then(data => (this.coursesList = data.courses))
+    this.coursesService.getCoursesList()
+      .then((courses: Array<CourseInterface>) => this.coursesList = courses)
       .catch(e => {
-          this.errorMessage = EMPTY_COURSES_LIST_MESSAGE;
-          console.log(e);
-        }
-      );
+        this.errorMessage = EMPTY_COURSES_LIST_MESSAGE;
+        console.log(e);
+      });
+  }
+
+  editCourse(id) {
+    console.log(id)
+  }
+
+  deleteCourse(id) {
+    if (window.confirm('Do you really want to delete this course?')) {
+      this.coursesService.removeCourse(id);
+      this.coursesService.removeCourse.call(this, id);
+    }
   }
 
   onClick(id: string) {

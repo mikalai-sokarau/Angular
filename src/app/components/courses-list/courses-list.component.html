@@ -11,7 +11,8 @@
         isTopRated={{course.isTopRated}}
         img={{course.img}}
         description={{course.description}}
-        (onClickHandler)="onClick($event)"
+        (editHandler)="editCourse($event)"
+        (deleteHandler)="deleteCourse($event)"
       ></app-course>
     </li>
   </ul>

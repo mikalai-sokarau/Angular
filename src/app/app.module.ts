@@ -16,6 +16,7 @@ import { SliceToLengthPipe } from './shared/pipes/sliceToLength/slice-to-length.
 import { BorderStylingDirective } from './shared/directives/borderStyling/border-styling.directive';
 import { DurationPipe } from './shared/pipes/duration/duration.pipe';
 import { OrderByPipe } from './shared/pipes/orderBy/order-by.pipe';
+import { CoursesOperationsService } from './shared/services/courseOperations/courses-operations.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,9 @@ import { OrderByPipe } from './shared/pipes/orderBy/order-by.pipe';
     FontAwesomeModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    CoursesOperationsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

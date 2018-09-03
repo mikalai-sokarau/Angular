@@ -20,7 +20,8 @@ export class CourseComponent implements CourseInterface, OnInit {
   @Input() created: string;
   @Input() isTopRated: string;
   @Input() img: string;
-  @Output() onClickHandler = new EventEmitter<string>();
+  @Output() deleteHandler = new EventEmitter<string>();
+  @Output() editHandler = new EventEmitter<string>();
 
   public color;
   public editIcon: IconDefinition = faEdit;
@@ -30,8 +31,12 @@ export class CourseComponent implements CourseInterface, OnInit {
   public currentDate = new Date();
   public creationDate: Date;
 
-  onClick(event) {
-    this.onClickHandler.emit(this.id);
+  onDeleteHandler() {
+    this.deleteHandler.emit(this.id);
+  }
+
+  onEditHandler() {
+    this.editHandler.emit(this.id);
   }
 
   constructor() {}
