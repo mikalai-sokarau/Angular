@@ -1,0 +1,21 @@
+.login-component {
+  border: 1px solid black;
+
+  header {
+    border-bottom: 1px solid black;
+    padding: 3px;
+    font-style: italic;
+  }
+
+  main {
+    padding: 40px 70px;
+  }
+
+  .login-wrapper, .password-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+    font-size: 1.2em;
+    font-style: italic;
+  } 
+}

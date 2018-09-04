@@ -18,6 +18,8 @@ import { DurationPipe } from './shared/pipes/duration/duration.pipe';
 import { OrderByPipe } from './shared/pipes/orderBy/order-by.pipe';
 import { CoursesOperationsService } from './shared/services/courseOperations/courses-operations.service';
 import { AuthService } from './shared/services/authorization/auth.service';
+import { LoginModule } from './pages/login/login.module';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { AuthService } from './shared/services/authorization/auth.service';
   imports: [
     BrowserModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    LoginModule
   ],
   providers: [
     CoursesOperationsService,
