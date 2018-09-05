@@ -12,12 +12,12 @@ export class AuthService {
     window.localStorage.setItem(user.id, JSON.stringify(user));
   }
 
-  logOut(user: UserInterface) {
-    window.localStorage.removeItem(user.id);
+  logOut(id: string) {
+    window.localStorage.removeItem(id);
   }
 
-  isAuthenticated(user: UserInterface) {
-    return !!localStorage.getItem(user.id);
+  isAuthenticated(id: string) {
+    return !!localStorage.getItem(id);
   }
 
   getUserInfo(id: string) {
