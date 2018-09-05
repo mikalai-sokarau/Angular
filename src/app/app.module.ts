@@ -36,7 +36,6 @@ import { LoginModule } from './pages/login/login.module';
     BorderStylingDirective,
     DurationPipe,
     OrderByPipe,
-    LoginComponent,
   ],
   imports: [
     BrowserModule,
