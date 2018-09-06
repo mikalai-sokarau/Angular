@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AuthService } from './services/authorization/auth.service';
 import { CoursesOperationsService } from './services/courseOperations/courses-operations.service';
@@ -14,7 +14,6 @@ import { ButtonComponent } from './button/button.component';
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
     FontAwesomeModule
   ],
   declarations: [
@@ -27,6 +26,15 @@ import { ButtonComponent } from './button/button.component';
   providers: [
     AuthService,
     CoursesOperationsService
+  ],
+  exports: [
+    CommonModule,
+    FormsModule,
+    DurationPipe,
+    OrderByPipe,
+    SliceToLengthPipe,
+    BorderStylingDirective,
+    ButtonComponent
   ]
 })
 export class SharedModule { }

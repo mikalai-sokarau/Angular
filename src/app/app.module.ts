@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -16,6 +16,13 @@ import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.compo
 
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    SharedModule,
+    LoginModule,
+    FormsModule,
+    FontAwesomeModule
+  ],
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -25,13 +32,6 @@ import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.compo
     MainComponent,
     BreadcrumbsComponent,
     ToolboxComponent,
-  ],
-  imports: [
-    BrowserModule,
-
-    SharedModule,
-    LoginModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]

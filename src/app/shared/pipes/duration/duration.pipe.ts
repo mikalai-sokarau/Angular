@@ -11,5 +11,4 @@ export class DurationPipe implements PipeTransform {
 
     return `${hours > 0 ? hours + 'h' : ''} ${minutes < 10 ? '0' + minutes : minutes}min`;
   }
-  
 }

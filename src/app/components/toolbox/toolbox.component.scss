@@ -2,6 +2,8 @@
   display: flex;
   flex: 1;
   margin: 1em 2em;
+  border-bottom: 1px solid #dadada;
+  padding-bottom: 15px;
 
   &> div {
     width: 50%;
